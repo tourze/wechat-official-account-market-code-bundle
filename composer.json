@@ -1,6 +1,6 @@
 {
   "name": "extra/wechat-official-account-market-code-bundle",
-  "description": "公众号模块",
+  "description": "公众号一物一码",
   "type": "symfony-bundle",
   "license": "MIT",
   "require": {
