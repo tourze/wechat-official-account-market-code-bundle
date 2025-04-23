@@ -2,6 +2,7 @@
   "name": "extra/wechat-official-account-market-code-bundle",
   "description": "公众号模块",
   "type": "symfony-bundle",
+  "license": "MIT",
   "require": {
     "php": "^8.1",
     "doctrine/dbal": "^3.7.0 || ^4.0",
