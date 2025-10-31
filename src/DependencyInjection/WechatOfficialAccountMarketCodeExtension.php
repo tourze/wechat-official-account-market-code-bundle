@@ -1,20 +1,21 @@
 <?php
 
+declare(strict_types=1);
+
 namespace WechatOfficialAccountMarketCodeBundle\DependencyInjection;
 
-use Symfony\Component\Config\FileLocator;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Extension\Extension;
-use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Tourze\SymfonyDependencyServiceLoader\AutoExtension;
 
-class WechatOfficialAccountMarketCodeExtension extends Extension
+/**
+ * 微信公众号一物一码营销推广Bundle的依赖注入扩展
+ */
+class WechatOfficialAccountMarketCodeExtension extends AutoExtension
 {
-    public function load(array $configs, ContainerBuilder $container): void
+    /**
+     * 获取配置文件目录路径
+     */
+    protected function getConfigDir(): string
     {
-        $loader = new YamlFileLoader(
-            $container,
-            new FileLocator(__DIR__ . '/../Resources/config')
-        );
-        $loader->load('services.yaml');
+        return __DIR__ . '/../Resources/config';
     }
 }
