@@ -9,7 +9,7 @@ use Tourze\SymfonyDependencyServiceLoader\AutoExtension;
 /**
  * 微信公众号一物一码营销推广Bundle的依赖注入扩展
  */
-class WechatOfficialAccountMarketCodeExtension extends AutoExtension
+final class WechatOfficialAccountMarketCodeExtension extends AutoExtension
 {
     /**
      * 获取配置文件目录路径

@@ -3,6 +3,16 @@ services:
   _defaults:
     autowire: true      # Automatically injects dependencies in your services.
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+    public: false
 
-  WechatOfficialAccountMarketCodeBundle\DependencyInjection\WechatOfficialAccountMarketCodeExtension:
-    public: true
+  # 当存在相关目录时，会自动注册以下服务：
+  # WechatOfficialAccountMarketCodeBundle\Controller\:
+  #   resource: '../../Controller/'
+  # WechatOfficialAccountMarketCodeBundle\Repository\:
+  #   resource: '../../Repository/'
+  # WechatOfficialAccountMarketCodeBundle\Service\:
+  #   resource: '../../Service/'
+  #   public: true
+  # WechatOfficialAccountMarketCodeBundle\EventListener\:
+  #   resource: '../../EventListener/'
+  #   public: true

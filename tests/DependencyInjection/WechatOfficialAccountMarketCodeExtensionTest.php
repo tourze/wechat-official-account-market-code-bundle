@@ -70,8 +70,7 @@ final class WechatOfficialAccountMarketCodeExtensionTest extends AbstractDepende
         // 验证容器已经配置完成
         $this->assertTrue($container->isTrackingResources());
 
-        // 验证扩展本身被正确注册为public服务
-        $this->assertTrue($container->hasDefinition(WechatOfficialAccountMarketCodeExtension::class));
-        $this->assertTrue($container->getDefinition(WechatOfficialAccountMarketCodeExtension::class)->isPublic());
+        // 验证容器配置正常，没有注册任何不需要的服务
+        $this->assertFalse($container->hasDefinition(WechatOfficialAccountMarketCodeExtension::class));
     }
 }
